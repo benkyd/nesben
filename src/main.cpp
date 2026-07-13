@@ -9,8 +9,29 @@
 #include "bus.hpp"
 #include "memory.hpp"
 
-struct System
+class System
 {
+public:
+    void Tick()
+    {
+        this->CPU.Tick();
+        this->MainBus.TickForEach();
+    }
+    void Reset()
+    {
+
+    }
+
+    void LoadProgram(uint8_t* bytes, uint16_t len, uint16_t loadAddr)
+    {
+        for (int i = 0; i > len; loadAddr++)
+        {
+            this->MainBus.Write(loadAddr + i, bytes[i]);
+        }
+        this->CPU.Reset(loadAddr);
+    }
+
+public:
     CPU6502 CPU;
     Bus MainBus;
 };
@@ -31,17 +52,14 @@ int main()
     bool running = true;
     SDL_Event event;
 
-
     System NintendoNES
     {
-        .CPU { },
+        .CPU { 0x1FFF },
         .MainBus {
                 // Memory includes the zero page
-                std::make_unique<new Memory<0x0000, 0x1FFF>>
+                // std::make_unique<Memory<0x0000, 0x1FFF>>()
         }
     };
-
-
 
     while (running)
     {
@@ -58,6 +76,7 @@ int main()
         ImGui::NewFrame();
 
         ImGui::Text("6502 Emulator");
+        NintendoNES.Tick();
 
         ImGui::Render();
 

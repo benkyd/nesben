@@ -43,7 +43,13 @@
 },
 {
   "directory": "/mnt/dev/projects/nesben/build",
-  "command": "/usr/bin/c++  -I/mnt/dev/projects/nesben/src -I/mnt/dev/projects/nesben/build/vendor/sdl3-build/include-revision -I/mnt/dev/projects/nesben/build/vendor/sdl3-src/include -I/mnt/dev/projects/nesben/build/vendor/imgui-src -I/mnt/dev/projects/nesben/build/vendor/imgui-src/backends -g -std=c++20 -o CMakeFiles/NESBEN.dir/src/main.cpp.o -c /mnt/dev/projects/nesben/src/main.cpp",
+  "command": "/usr/bin/c++  -I/mnt/dev/projects/nesben/include -I/mnt/dev/projects/nesben/src -I/mnt/dev/projects/nesben/build/vendor/sdl3-build/include-revision -I/mnt/dev/projects/nesben/build/vendor/sdl3-src/include -I/mnt/dev/projects/nesben/build/vendor/imgui-src -I/mnt/dev/projects/nesben/build/vendor/imgui-src/backends -g -std=c++20 -o CMakeFiles/NESBEN.dir/src/bus.cpp.o -c /mnt/dev/projects/nesben/src/bus.cpp",
+  "file": "/mnt/dev/projects/nesben/src/bus.cpp",
+  "output": "CMakeFiles/NESBEN.dir/src/bus.cpp.o"
+},
+{
+  "directory": "/mnt/dev/projects/nesben/build",
+  "command": "/usr/bin/c++  -I/mnt/dev/projects/nesben/include -I/mnt/dev/projects/nesben/src -I/mnt/dev/projects/nesben/build/vendor/sdl3-build/include-revision -I/mnt/dev/projects/nesben/build/vendor/sdl3-src/include -I/mnt/dev/projects/nesben/build/vendor/imgui-src -I/mnt/dev/projects/nesben/build/vendor/imgui-src/backends -g -std=c++20 -o CMakeFiles/NESBEN.dir/src/main.cpp.o -c /mnt/dev/projects/nesben/src/main.cpp",
   "file": "/mnt/dev/projects/nesben/src/main.cpp",
   "output": "CMakeFiles/NESBEN.dir/src/main.cpp.o"
 },

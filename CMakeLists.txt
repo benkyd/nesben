@@ -78,6 +78,7 @@ add_executable(NESBEN ${NESBEN_SOURCES})
 
 target_include_directories(NESBEN
     PRIVATE
+        include
         src
 )
 
